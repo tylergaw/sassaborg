@@ -6,7 +6,7 @@
 
     @media screen and ($medScreenWidthCondition) {
         float: right;
-        width: calc-percent(getTargetWidth(1), $mainWidthMidScreen);
+        width: calc-percent(getTargetWidth(1.5), $mainWidthMidScreen);
     }
 
     @media screen and ($lrgScreenWidthCondition) {
