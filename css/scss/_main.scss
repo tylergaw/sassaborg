@@ -1,0 +1,18 @@
+[role="main"] {
+    @extend %bordered-content;
+    @include box-sizing(border-box);
+    height: 100%;
+    margin-bottom: 1em;
+    padding: 0.2em;
+
+    @media screen and ($medScreenWidthCondition) {
+        float: right;
+        margin-right: calc-percent(getTargetWidth(0.5), $containerMaxWidth);
+        width: calc-percent($mainWidthMidScreen, $containerMaxWidth);
+    }
+
+    @media screen and ($lrgScreenWidthCondition) {
+        margin-right: calc-percent(getTargetWidth(3) + $gutterWidth, $containerMaxWidth);
+        width: calc-percent($mainWidth, $containerMaxWidth);
+    }
+}

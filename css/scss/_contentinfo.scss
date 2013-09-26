@@ -1,0 +1,16 @@
+[role="contentinfo"] {
+    @extend %bordered-content;
+    clear: both;
+    margin: 0 auto;
+    padding: 1.8em 1.1em 1.6em 1.1em;
+
+    @media screen and ($medScreenWidthCondition) {
+        max-width: getTargetWidth(10);
+        padding: 1.2em 0 1.8em 0;
+        width: calc-percent($footerWidthMidScreen, $containerMaxWidth);
+    }
+
+    @media screen and ($lrgScreenWidthCondition) {
+        width: calc-percent($footerWidth, $containerMaxWidth);
+    }
+}

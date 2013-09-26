@@ -1,0 +1,20 @@
+.content {
+    @extend %bordered-content;
+    @include box-sizing(border-box);
+    min-height: 300px;
+    padding: 1em;
+}
+
+@media screen and ($medScreenWidthCondition) {
+    .content {
+        float: left;
+        max-width: $mainContentWidth;
+        width: calc-percent($mainContentWidthMidScreen, $mainWidthMidScreen);
+    }
+}
+
+@media screen and ($lrgScreenWidthCondition) {
+    .content {
+        width: calc-percent($mainContentWidth, $mainWidth);
+    }
+}

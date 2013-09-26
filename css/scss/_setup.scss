@@ -1,0 +1,30 @@
+@function calc-percent($target, $context) {
+    @return ($target / $context) * 100%;
+}
+
+@function getTargetWidth($numCols) {
+    // For every 2 cols, 1 gutter is needed.
+    $totalGutterWidth: (ceil($numCols) - 1) * $gutterWidth;
+    $totalColWidth: $numCols * $colWidth;
+    @return floor($totalColWidth + $totalGutterWidth);
+}
+
+// Grid setup
+$colWidth: 83px;
+$gutterWidth: 14px;
+$cols: 14;
+$containerMaxWidth: 1330px;
+
+$mainContentColsMidScreen: 9.5;
+$mainContentCols: 7;
+
+$mainWidth: getTargetWidth($mainContentCols);
+$footerWidth: getTargetWidth(10);
+$mainContentWidth: getTargetWidth(6);
+
+$mainWidthMidScreen: getTargetWidth($mainContentColsMidScreen);
+$footerWidthMidScreen: getTargetWidth(12);
+$mainContentWidthMidScreen: getTargetWidth(8);
+
+$medScreenWidthCondition: "min-width: 571px";
+$lrgScreenWidthCondition: "min-width: 850px";

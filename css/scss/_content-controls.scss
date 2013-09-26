@@ -1,0 +1,15 @@
+.content-controls {
+    @extend %bordered-content;
+    @include box-sizing(border-box);
+    overflow: hidden;
+    min-height: 100px;
+
+    @media screen and ($medScreenWidthCondition) {
+        float: right;
+        width: calc-percent(getTargetWidth(1), $mainWidthMidScreen);
+    }
+
+    @media screen and ($lrgScreenWidthCondition) {
+        width: calc-percent(getTargetWidth(1), $mainWidth);
+    }
+}

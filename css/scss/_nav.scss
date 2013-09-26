@@ -1,0 +1,21 @@
+.nav {
+    @extend %bordered-content;
+    @include box-sizing(border-box);
+    margin-bottom: 1em;
+    min-height: 100px;
+
+    text-align: center;
+
+    @media screen and ($medScreenWidthCondition) {
+        float: left;
+        padding: 1.6em 0 3.5em 0;
+        margin-left: calc-percent(getTargetWidth(0.5), $containerMaxWidth);
+
+        width: calc-percent(getTargetWidth(2.8), $containerMaxWidth);
+    }
+
+    @media screen and ($lrgScreenWidthCondition) {
+        margin-left: calc-percent(getTargetWidth(1) + $gutterWidth, $containerMaxWidth);
+        width: calc-percent(getTargetWidth(2), $containerMaxWidth);
+    }
+}

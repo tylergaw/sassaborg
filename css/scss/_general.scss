@@ -1,0 +1,27 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    @extend %helvetica;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.app-content-container {
+    @extend %bordered-content;
+    @include box-sizing(border-box);
+    margin: 0 auto;
+    max-width: $containerMaxWidth;
+    padding: 0.4em 0.2em;
+}
+
+code {
+    @extend %monospace;
+}
+
+%bordered-content {
+    border-style: solid;
+    border-width: 1px;
+}
